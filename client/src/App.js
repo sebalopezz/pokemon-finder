@@ -1,25 +1,21 @@
 import React from 'react';
-import logo from './logo.svg';
+import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client';
+import PokemonProvider from './context/Pokemon';
+import Home from './pages/Home';
 import './App.css';
+
+const client = new ApolloClient({
+  uri: 'http://localhost:5000',
+  cache: new InMemoryCache()
+})
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ApolloProvider client={client}>
+      <PokemonProvider>
+        <Home/>
+      </PokemonProvider>
+    </ApolloProvider>
   );
 }
 
