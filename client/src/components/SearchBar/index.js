@@ -1,6 +1,7 @@
 import React, { useState, useContext } from 'react'
 import { useLazyQuery, gql } from '@apollo/client';
 import { PokemonContext } from '../../context/Pokemon';
+import './styles.scss';
 
 const GET_POKEMONS = gql`
     query PokemonsQuery($search: String!) {

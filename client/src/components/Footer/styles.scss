@@ -1,0 +1,13 @@
+.footer {
+    display: flex;
+    margin-top: 10px;
+    font-size: 14px;
+    border-top: 1px solid rgb(213, 213, 213);
+    justify-content: space-between;
+    align-items: center;
+
+    .btn-github-wrapper {
+        width: 100px;
+        cursor: pointer;
+    }
+}

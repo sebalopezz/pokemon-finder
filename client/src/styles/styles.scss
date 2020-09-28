@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
+body, html {
+    margin: 0;
+    padding: 0 5vw;
+    background-color: #F3F3F3;
+    font-family: 'Lato', sans-serif;
+
+    @media (max-width: 575.98px) {
+        padding: 0 10px;
+    }
+}

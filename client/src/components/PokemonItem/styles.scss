@@ -1,0 +1,22 @@
+.pokemon-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+
+    .pokemon-img {
+        width: 120px;
+        min-width: 120px;
+        height: 120px;
+        min-height: 120px;
+        background-color: white;
+        border-radius: 5px;
+        margin-right: 10px;
+        -webkit-box-shadow: -5px 5px 5px 0px rgba(0,0,0,0.32);
+        -moz-box-shadow: -5px 5px 5px 0px rgba(0,0,0,0.32);
+        box-shadow: -5px 5px 5px 0px rgba(0,0,0,0.32);
+    }
+
+    .pokemon-name {
+        text-transform: capitalize;
+    }
+}

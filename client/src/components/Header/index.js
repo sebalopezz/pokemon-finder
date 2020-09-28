@@ -1,10 +1,11 @@
 import React from 'react'
 import logo from '../../assets/logo.png'
+import './styles.scss';
 
 const Header = props => {
     return (
-        <div>
-          <img src={logo} alt="Pokemon Finder Logo" />
+        <div className="header">
+          <img src={logo} alt="Pokemon Finder Logo" className="logo"/>
         </div>
     )
 }

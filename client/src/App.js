@@ -2,7 +2,7 @@ import React from 'react';
 import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client';
 import PokemonProvider from './context/Pokemon';
 import Home from './pages/Home';
-import './App.css';
+import './styles/styles.scss';
 
 const client = new ApolloClient({
   uri: 'http://localhost:5000',

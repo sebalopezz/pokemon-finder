@@ -1,0 +1,43 @@
+.search-bar {
+    display: flex;
+
+    input, button {
+        box-sizing: border-box;
+        border-radius: 5px;
+        height: 35px;
+        padding: 10px 5px;
+
+    }
+
+    input {
+        background-color: rgb(245, 245, 245);
+        width: 40vw;
+        border: 1px solid rgb(216, 216, 216);
+        min-width: 200px;
+        margin-right: 10px;
+    }
+
+    button {
+        border: 0px solid transparent;
+        background-color: #EF4036;
+        color: white;
+        font-weight: bold;
+        padding: 10px 25px;
+        min-width: 200px;
+        cursor: pointer;
+
+        &.btn-inactive {
+            background-color: #b1b1b1;
+            cursor: not-allowed;
+        }
+    }
+
+    @media (max-width: 575.98px) {
+        flex-direction: column;
+
+        input, button {
+            width: 100%;
+            margin-bottom: 5px;
+        }
+    }
+}

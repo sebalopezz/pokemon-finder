@@ -6,7 +6,7 @@ const Pokemons = props => {
     const { pokemons } = useContext(PokemonContext)
 
     return (
-        <div>
+        <div className="pokemon-list">
             <h3>{(pokemons) ? `Resultados (${pokemons.length})` : ""}</h3>
             {pokemons && pokemons.map(pokemon => (
                 <PokemonItem key={pokemon.name} pokemon={pokemon}/>
