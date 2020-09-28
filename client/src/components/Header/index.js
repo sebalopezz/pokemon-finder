@@ -5,7 +5,7 @@ import './styles.scss';
 const Header = props => {
     return (
         <div className="header">
-          <img src={logo} alt="Pokemon Finder Logo" className="logo"/>
+          <img src={logo} alt="Pokemon Finder Logo" className="logo" data-testid="header-logo"/>
         </div>
     )
 }

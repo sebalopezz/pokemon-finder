@@ -15,7 +15,7 @@ const GET_POKEMONS = gql`
 const SearchBar = props => {
 
     const [query, setQuery] = useState("");
-    const { setPokemons } = useContext(PokemonContext);
+    const { setPokemons } = useContext(PokemonContext) || {};
 
     const [getPokemons, { loading, data }] = useLazyQuery(GET_POKEMONS, {
         onCompleted: () => setPokemons(data.pokemons)
@@ -30,9 +30,9 @@ const SearchBar = props => {
 
     return (
         <div>
-            <form onSubmit={onFormSubmit} className="search-bar">
-                <input type="text" placeholder="Ingrese el nombre a buscar" onChange={(e) => setQuery(e.target.value) }/>
-                <button onClick={onFormSubmit} className={((query.length && !loading) ? 'btn-active' : 'btn-inactive')}> {loading ? 'Cargando...' : 'Buscar'} </button>
+            <form onSubmit={onFormSubmit} className="search-bar" data-testid="search-bar">
+                <input type="text" placeholder="Ingrese el nombre a buscar" data-testid="search-input" onChange={(e) => setQuery(e.target.value) }/>
+                <button onClick={onFormSubmit} className={((query.length && !loading) ? 'btn-active' : 'btn-inactive')} data-testid="search-btn"> {loading ? 'Cargando...' : 'Buscar'} </button>
             </form>
         </div>
     )
