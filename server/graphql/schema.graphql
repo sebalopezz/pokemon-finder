@@ -1,0 +1,8 @@
+  type Query {
+    pokemons(search: String): [Pokemon!]!
+  }
+
+  type Pokemon {
+    name: String!
+    pictureURL: String
+  }
